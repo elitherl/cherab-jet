@@ -19,7 +19,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.constants import electron_mass, atomic_mass
-from jet.data import sal
+from sal.client import SALClient
 from raysect.core import Vector3D
 from raysect.optical import World
 
@@ -32,6 +32,8 @@ from cherab.openadas import OpenADAS
 from cherab.jet.nbi import load_pini_from_ppf
 from cherab.jet.equilibrium import JETEquilibrium
 from cherab.jet.spectroscopy.ks5 import load_ks5_sightlines
+
+sal = SALClient("https://sal.jetdata.eu")
 
 
 PULSE = 79666

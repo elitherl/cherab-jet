@@ -24,8 +24,10 @@ import numpy as np
 from raysect.core import Point2D
 from cherab.tools.equilibrium import EFITEquilibrium
 
-from jet.data import sal
+from sal.client import SALClient
 from sal.core.exception import NodeNotFound
+
+sal = SALClient("https://sal.jetdata.eu")
 
 
 # special JET constant that signifies if an x-point is not present
